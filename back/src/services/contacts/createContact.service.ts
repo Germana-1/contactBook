@@ -28,15 +28,15 @@ const createContactService = async (
     throw new AppError("Phone already exists", 409);
   }
 
-  const foundUser = await userRepository.findOneBy({
+  const findUser = await userRepository.findOneBy({
     id: userId,
   });
 
-  if (!foundUser) {
+  if (!findUser) {
     throw new AppError("User not found", 404);
   }
 
-  const contact = contactRepository.create({ ...dataContact, user: foundUser });
+  const contact = contactRepository.create({ ...dataContact, user: findUser });
 
   await contactRepository.save(contact);
 
