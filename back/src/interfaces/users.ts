@@ -1,0 +1,22 @@
+export interface IUserRequest {
+  fullName: string;
+  email: string;
+  phone: string;
+  password: string;
+}
+
+export interface IUserResponse {
+  id: string;
+  fullName: string;
+  email: string;
+  phone: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface IUserUpdate {
+  fullName?: string;
+  email?: string;
+  phone?: string;
+  password?: string;
+}
