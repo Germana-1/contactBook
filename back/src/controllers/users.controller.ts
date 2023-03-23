@@ -10,7 +10,7 @@ const createUserController = async (req: Request, res: Response) => {
 };
 
 const updateUserController = async (req: Request, res: Response) => {
-  const updatedUser = await updateUserService(req.body, req.params.id);
+  const updatedUser = await updateUserService(req.body, req.user.id);
   return res.status(200).json(updatedUser);
 };
 
@@ -20,7 +20,7 @@ const listUsersController = async (req: Request, res: Response) => {
 };
 
 const deleteUserController = async (req: Request, res: Response) => {
-  await deleteUserService(req.params.id);
+  await deleteUserService(req.user.id);
   return res.status(204).json({});
 };
 
