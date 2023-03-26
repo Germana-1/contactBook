@@ -50,7 +50,7 @@ Antes de usar o projeto, é necessário configurar o servidor back-end. Lembre-s
 Abra o diretório back/ em seu terminal e execute o comando ```shell
 npm install
 
-`````para instalar as dependências.
+```para instalar as dependências.
 Crie um banco de dados no PostgreSQL e configure as informações de conexão no arquivo .env a partir do arquivo .env.example.
 Execute as migrations do banco de dados com o comando ```shell
 npm run typeorm migration:run -- -d ./src/data-source
