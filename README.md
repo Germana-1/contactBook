@@ -632,6 +632,46 @@ Vazio
 
 ---
 
-```
+## 2. **Login**
+
+### 2.1. **Login do Usuário**
+
+### `/login`
+
+### Exemplo de Request:
 
 ```
+POST /login
+Host: http://localhost:3002
+Authorization: None
+Content-type: application/json
+```
+
+### Corpo da Requisição:
+
+```json
+{
+  "email": "exemplo@gmail.com",
+  "password": "senha123"
+}
+```
+
+### Exemplo de Response:
+
+```
+200 OK
+```
+
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzk4NTk3MTYsImV4cCI6MTY3OTk0NjExNiwic3ViIjoiMGJiYTc5MDUtODFkNi00ZGE5LTlmOTMtYmI3OGYxY2ZlNThiIn0.kVt4W_8ASeIhEwcyVtereLZ2J1oNm0nEhWMzo8vke3E"
+}
+```
+
+### Possíveis Erros:
+
+| Código do Erro | Descrição                |
+| -------------- | ------------------------ |
+| 403 Forbidden  | User or password invalid |
+
+---
