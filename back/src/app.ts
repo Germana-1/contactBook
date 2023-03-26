@@ -4,10 +4,13 @@ import errorHandler from "./errors/index";
 import usersRoutes from "./routes/users.routes";
 import contactsRoutes from "./routes/contacts.routes";
 import loginRoutes from "./routes/login.routes";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
+
+app.use(cors());
 
 app.use("/users", usersRoutes);
 

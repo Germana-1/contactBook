@@ -14,6 +14,16 @@ export interface IUserResponse {
   updatedAt: Date;
 }
 
+export interface IRetrieverUserResponse {
+  id: string;
+  fullName: string;
+  email: string;
+  phone: string;
+  createdAt: Date;
+  updatedAt: Date;
+  contacts: object[];
+}
+
 export interface IUserUpdate {
   fullName?: string;
   email?: string;

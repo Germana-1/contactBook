@@ -3,6 +3,7 @@ import {
   createUserController,
   deleteUserController,
   listUsersController,
+  retrieverUserController,
   updateUserController,
 } from "../controllers/users.controller";
 import ensureAuthMiddleware from "../middlewares/ensureAuth.middleware";
@@ -22,5 +23,7 @@ usersRoutes.patch("", ensureAuthMiddleware, updateUserController);
 usersRoutes.get("", ensureAuthMiddleware, listUsersController);
 
 usersRoutes.delete("", ensureAuthMiddleware, deleteUserController);
+
+usersRoutes.get("/profile", ensureAuthMiddleware, retrieverUserController);
 
 export default usersRoutes;

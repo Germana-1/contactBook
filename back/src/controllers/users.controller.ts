@@ -3,6 +3,7 @@ import { Response, Request } from "express";
 import updateUserService from "../services/users/updateUser.service";
 import listUsersService from "../services/users/listUsers.service";
 import deleteUserService from "../services/users/deleteUser.service";
+import retrieverUserService from "../services/users/retrieverUser.service";
 
 const createUserController = async (req: Request, res: Response) => {
   const newUser = await createUserService(req.body);
@@ -19,6 +20,11 @@ const listUsersController = async (req: Request, res: Response) => {
   return res.status(200).json(users);
 };
 
+const retrieverUserController = async (req: Request, res: Response) => {
+  const user = await retrieverUserService(req.user.id);
+  return res.status(200).json(user);
+};
+
 const deleteUserController = async (req: Request, res: Response) => {
   await deleteUserService(req.user.id);
   return res.status(204).json({});
@@ -29,4 +35,5 @@ export {
   updateUserController,
   listUsersController,
   deleteUserController,
+  retrieverUserController,
 };
