@@ -148,14 +148,14 @@ O objeto User é definido como:
 
 ### Exemplo de Request:
 
-`````
+```
 
 POST /users
 Host: http://localhost:3002
 Authorization: None
 Content-type: application/json
 
-````
+```
 
 ### Corpo da Requisição:
 
@@ -166,7 +166,7 @@ Content-type: application/json
   "phone": "5555-5555",
   "password": "senha123"
 }
-````
+```
 
 OBS.: Chaves não presentes no schema serão removidas.
 
@@ -631,4 +631,7 @@ Vazio
 | 404 Not Found    | Contact not found. |
 
 ---
-`````
+
+```
+
+```
