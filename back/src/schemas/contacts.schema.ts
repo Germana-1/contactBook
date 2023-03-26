@@ -10,7 +10,7 @@ const createContactSchema: SchemaOf<IContactRequest | any> = yup
     fullName: yup.string().required(),
     email: yup.string().email().required(),
     phone: yup.string().required(),
-    isFavorite: yup.string().notRequired(),
+    isFavorite: yup.boolean().notRequired(),
   });
 
 const contactReturnedData: SchemaOf<IContactResponse | any> = yup
@@ -19,7 +19,7 @@ const contactReturnedData: SchemaOf<IContactResponse | any> = yup
     createdAt: yup.date().required(),
     updatedAt: yup.date().required(),
     user: userReturnedData.required(),
-    isFavorite: yup.string().notRequired(),
+    isFavorite: yup.boolean().notRequired(),
     fullName: yup.string().required(),
     email: yup.string().email().required(),
     phone: yup.string().required(),
