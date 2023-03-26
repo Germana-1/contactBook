@@ -448,3 +448,154 @@ OBS.: A chave "isFavorite" é opcional, caso não seja passada, receberá seu va
 | 409 Conflict     | Phone already registered. |
 
 ---
+
+### 2.2. **Listando Contatos**
+
+### `/contacts`
+
+### Exemplo de Request:
+
+```
+GET /contacts
+Host: http://localhost:3002
+Authorization: Bearer token
+Content-type: application/json
+```
+
+### Corpo da Requisição:
+
+```json
+Vazio
+```
+
+### Exemplo de Response:
+
+```
+200 OK
+```
+
+```json
+[
+  {
+    "id": "52fcd849-6239-4ebd-8fa6-7b231c35b21e",
+    "phone": "0000-0000",
+    "email": "contato@gmail.com",
+    "fullName": "Contato",
+    "isFavorite": true,
+    "createdAt": "2023-03-26T19:42:13.048Z",
+    "updatedAt": "2023-03-26T19:42:13.048Z"
+  }
+]
+```
+
+### Possíveis Erros:
+
+| Código do Erro   | Descrição      |
+| ---------------- | -------------- |
+| 401 Unauthorized | Invalid token. |
+
+---
+
+### 2.3. **Atualizar Contato**
+
+### `/contacts/:contact_id`
+
+### Exemplo de Request:
+
+```
+PATCH /contacts/:contact_id
+Host: http://localhost:3002
+Authorization: Bearer token
+Content-type: application/json
+```
+
+### Parâmetros da Requisição:
+
+| Parâmetro  | Tipo   | Descrição                      |
+| ---------- | ------ | ------------------------------ |
+| contact_id | string | Identificador único do contato |
+
+### Corpo da Requisição:
+
+```json
+{
+  "phone": "0000-0000",
+  "email": "contato@gmail.com",
+  "fullName": "Contato",
+  "isFavorite": true
+}
+```
+
+OBS.: Todas as chaves são opcionais. Chaves não presentes no schema serão removidas.
+
+### Exemplo de Response:
+
+```
+200 OK
+```
+
+```json
+{
+  "id": "d1e8f3e6-3d59-4635-9bfc-cc438876bde9",
+  "phone": "0000-0000",
+  "email": "contato@gmail.com",
+  "fullName": "Contato",
+  "isFavorite": true,
+  "createdAt": "2023-03-26T19:45:55.690Z",
+  "updatedAt": "2023-03-26T19:45:55.690Z",
+  "deletedAt": null
+}
+```
+
+### Possíveis Erros:
+
+| Código do Erro   | Descrição          |
+| ---------------- | ------------------ |
+| 401 Unauthorized | Invalid token.     |
+| 404 Not Found    | Contact not found. |
+
+---
+
+### 2.4. **Deletar Contato**
+
+### `/contacts/:contact_id`
+
+### Exemplo de Request:
+
+```
+DELETE /contacts/:contact_id
+Host: http://localhost:3002
+Authorization: Bearer token
+Content-type: application/json
+```
+
+### Parâmetros da Requisição:
+
+| Parâmetro  | Tipo   | Descrição                      |
+| ---------- | ------ | ------------------------------ |
+| contact_id | string | Identificador único do contato |
+
+### Corpo da Requisição:
+
+```json
+Vazio
+```
+
+### Exemplo de Response:
+
+```
+204 No Content
+```
+
+```json
+Vazio
+```
+
+### Possíveis Erros:
+
+| Código do Erro   | Descrição          |
+| ---------------- | ------------------ |
+| 401 Unauthorized | Invalid token.     |
+| 404 Not Found    | Contact not found. |
+
+---
