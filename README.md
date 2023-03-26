@@ -45,7 +45,7 @@ Framer Motion
 Axios
 React Hook Form
 Yup
-Como usar
+
 
 Para executar o projeto em sua máquina, siga os seguintes passos:
 
