@@ -1,4 +1,4 @@
-README - Cadastro de clientes e contatos
+README 
 
 Este projeto é uma aplicação para cadastro de clientes e seus contatos, utilizando as tecnologias Node.js, Express e PostgreSQL no back-end e React no front-end.
 
