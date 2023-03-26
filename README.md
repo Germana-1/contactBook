@@ -47,30 +47,47 @@ Um cliente pode ter mais de um contato vinculado a ele.
 
 Antes de usar o projeto, é necessário configurar o servidor back-end. Lembre-se que você precisa ter Node.js e o PostgreSQL instalados em sua máquina.
 
-Abra o diretório back/ em seu terminal e execute o comando ```shell
+Para instalar as dependências, abra o diretório back/ em seu terminal e execute o comando:
+
+```shell
 npm install
 
-`````para instalar as dependências.
+```
+
 Crie um banco de dados no PostgreSQL e configure as informações de conexão no arquivo .env a partir do arquivo .env.example.
-Execute as migrations do banco de dados com o comando ```shell
+Execute as migrations do banco de dados com o comando:
+
+```shell
 npm run typeorm migration:run -- -d ./src/data-source
 
-``` .
-Inicie o servidor com o comando   ```shell
+```
+
+Inicie o servidor com o comando:
+
+```shell
 npm run dev
 
-```.
-Configurando o cliente
-Abra o diretório front/ em seu terminal e execute o comando ```shell
+```
+
+#### Configurando o cliente
+
+Para instalar as dependências, abra o diretório front/ em seu terminal e execute o comando:
+
+```shell
 npm install
 
-```` para instalar as dependências.
-Inicie o cliente com o comando ```shell
+```
+
+Inicie o cliente com o comando:
+
+```shell
 npm start
 
-```` .
+```
+
 Acesse o cliente no navegador pelo endereço http://localhost:3000.
-Observações
+
+#### Observações:
 
 Para fazer requisições do cliente front-end, é necessário que o servidor back-end esteja em execução.
 Certifique-se de que o servidor está sendo executado antes de usar o cliente.
@@ -614,3 +631,4 @@ Vazio
 | 404 Not Found    | Contact not found. |
 
 ---
+`````
