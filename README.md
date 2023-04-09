@@ -112,7 +112,7 @@ Certifique-se de que o servidor está sendo executado antes de usar o cliente.
   - [PATCH - /contacts/:contact_id](#23-atualizar-contato)
   - [DELETE - /contacts/:contact_id](#24-deletar-contato)
 - [Login](#3-login)
-  - [POST - /login](#11-login-de-usuário)
+  - [POST - /login](#31-login-do-usuário)
 
 ---
 
@@ -632,9 +632,9 @@ Vazio
 
 ---
 
-## 2. **Login**
+## 3. **Login**
 
-### 2.1. **Login do Usuário**
+### 3.1. **Login do Usuário**
 
 ### `/login`
 
